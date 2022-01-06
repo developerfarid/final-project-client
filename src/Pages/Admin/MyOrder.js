@@ -7,23 +7,23 @@ import UseAuth from '../../Hooks/UseAuth';
 
 const MyOrder = () => {
     const [order, setOrder] = useState([])
-    const {user, logOut}= UseAuth()
-    const newok = {
-        up:"Approved"
-    }
+    const {user}= UseAuth()
+    // const newok = {
+    //     up:"Approved"
+    // }
     
  useEffect(() => {
         fetch(`https://afternoon-bayou-21114.herokuapp.com/order/${user?.email}`).then(res => res.json()).then(data => setOrder(data))
     }, [])
-    const myAlartForDataAdd = () => {
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Your Data has been Update',
-            showConfirmButton: false,
-            timer: 1500
-          })
-    }
+    // const myAlartForDataAdd = () => {
+    //     Swal.fire({
+    //         position: 'center',
+    //         icon: 'success',
+    //         title: 'Your Data has been Update',
+    //         showConfirmButton: false,
+    //         timer: 1500
+    //       })
+    // }
 
 
     const handleCancel = (id) => {

@@ -15,7 +15,7 @@ const Product = ({ pd }) => {
     return (
         <Col className="my-3">
             <Card>
-                <Card.Img  variant="top" src={url} />
+                <Card.Img  style={{height:"400px", objectFit:"cover"}} variant="top" src={url} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <p>{ des}</p>

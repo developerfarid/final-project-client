@@ -165,12 +165,20 @@ const [loding, setLoding]= useState(true)
                 'You have successfully Register',
                 'success'
             )
-        }
+    }
+    
         const unSuccessAlart = () => {
             Swal.fire(
                 'Opps!',
                 'Something Worng',
                 'error'
+            )
+        }
+        const trySuccessAlart = (a,b, c) => {
+            Swal.fire(
+                a,
+                b,
+                c
             )
         }
 
@@ -194,7 +202,7 @@ const [loding, setLoding]= useState(true)
        
 
         return {
-            product, successAlart, logOutAlart, unSuccessAlart, logOut,message,loding,error,user,registerAlart,handleSubmit,createUser,googleSign,sentResetPassByEmail ,productAll,saveUser,admin,setProductAll
+            product, successAlart, logOutAlart, unSuccessAlart, logOut,message,loding,error,user,registerAlart,handleSubmit,createUser,googleSign,sentResetPassByEmail ,productAll,saveUser,admin,setProductAll,trySuccessAlart
         }
     };
     export default AllData;
